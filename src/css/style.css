@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+header nav {
+    background-image: linear-gradient(to right, rgb(2, 2, 150), rgb(129, 62, 253));
+    color: #f9efe5;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header nav .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav .logo a span {
+    color: #fff;
+}
+
+header nav .menu {
+    list-style: none;
+    display: flex;
+    align-items: center ;
+}
+
+header nav .menu li {
+    display: inline;
+    margin: 10px;
+}
+
+header nav .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header nav .menu li a:hover {
+    color: #fff;
+}
+
+/* Hamburger menu icon */
+header nav .menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#inputPesquisa{
+    display: block;
+    width: 400px;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+#inputPesquisa1::placeholder{
+    margin: 10px;
+}
+
+.cadastro{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    transition: 0.5s ease;
+}
+
+.cadastro:hover{
+    transform: scale(1.1);
+}
+
+/* Estilos para o menu no mobile */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        justify-content: flex-start; /* Ajuste para que os itens fiquem alinhados ao topo */
+        align-items: flex-start;
+        padding: 20px;
+        position: relative; /* Necessário para o ícone de menu ser posicionado no topo à direita */
+    }
+
+    #inputPesquisa{
+        display: none;
+    }
+
+    header nav .logo a {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Menu */
+    header nav .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(to right, rgb(2, 2, 150), rgb(129, 62, 253));
+        text-align: center;
+    }
+
+    header nav .menu li {
+        display: inline-block;
+        margin:40px 0 0 10px;
+        position: relative;
+        font-size: 10px; 
+    }
+    
+    header nav .menu li:not(:last-child)::after {
+        content: "•"; /* Usando um marcador de ponto */
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff; /* Cor do marcador */
+    }
+
+    header nav .menu.active {
+        display: block;
+    }
+
+    /* Ícone do menu */
+    header nav .menu-icon {
+        display: block;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        position: absolute; /* Posicionamento absoluto para o ícone */
+        top: 20px; /* Distância do topo */
+        right: 20px; /* Distância da direita */
+    }
+
+    header nav .menu li a {
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+        padding: 25px 0;
+        text-decoration: none;
+    }
+
+    header nav .menu li a:hover {
+        background-color: #fff;
+    }
+}
