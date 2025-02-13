@@ -1,5 +1,3 @@
-
-
 *{
     margin: 0;
     padding: 0;
@@ -106,7 +104,7 @@ header nav .menu-icon {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px 0 30px;
+    padding: 20px 150px 0 150px;
 }
 
 .topo i{
@@ -170,6 +168,22 @@ header nav .menu-icon {
         position: relative; /* Necessário para o ícone de menu ser posicionado no topo à direita */
     }
 
+    .saloes{
+        flex-direction: row;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .salao{
+        width: 50%;
+        margin: 10px;
+    }
+
+    .topo{
+        justify-content: space-between;
+        padding: 20px 50px 0 50px;
+    }
+
     #inputPesquisa{
         display: none;
     }
@@ -231,5 +245,33 @@ header nav .menu-icon {
 
     header nav .menu li a:hover {
         background-color: #fff;
+    }
+}
+
+@media (max-width: 665px){
+    .saloes{
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .salao{
+        width: 100%;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 444px){
+    .saloes{
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .salao{
+        width: 100%;
+        margin: 20px;
     }
 }
